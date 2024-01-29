@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Fibonacci</title>
+</head>
+<body>
+    <script>
+// Crear un programa que retorne la secuencia de Fibonacci basado en el número de elementos que le haya entregado el usuario al inicio del programa.
+let numeroDeElementos = parseInt(prompt("Por favor ingrese el número de elementos de la secuencia Fibonacci"));
+
+function fibonacci(numeroDeElementos) {
+    if (isNaN(numeroDeElementos) || numeroDeElementos <= 0){
+    alert("Error: Por favor ingresar un número mayor a cero");
+    numeroDeElementos = parseInt(prompt("Por favor ingrese el número de elementos de la secuencia Fibonacci"));
+}
+    let arreglo = [0, 1];
+    
+    for (let i = 2; i < numeroDeElementos; i++) {
+        arreglo.push(arreglo[i -1] + arreglo[i - 2]);
+
+    }
+    let resultado = "La secuencia de Fibonacci es: " + arreglo ;
+    return console.log(resultado);
+};
+
+fibonacci(numeroDeElementos);
+
+    </script>
+</body>
+</html>
