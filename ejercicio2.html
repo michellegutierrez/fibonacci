@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        // Crear un programa que ordene el array sin usar la funcion sort
+        
+       let  arregloInicio = ["unacadena",3,9,1,10,500,1,10,true];
+       let nuevoArreglo = []
+      
+      for(let i = 0; i < arregloInicio.length; i ++){
+
+        if (typeof arregloInicio[i] == "number"){
+           nuevoArreglo.push(arregloInicio[i]);    
+    
+    }
+}
+    for (let i = 0; i < nuevoArreglo.length; i++) {
+        for (let j = 0; j < nuevoArreglo.length; j++) {
+            if (nuevoArreglo[j] > nuevoArreglo[j + 1]) {
+                let cambio = nuevoArreglo[j];
+                nuevoArreglo[j] = nuevoArreglo[j + 1];
+                nuevoArreglo[j + 1] = cambio
+
+            }
+        }
+}
+    
+    console.log(nuevoArreglo);
+    </script>
+</body>
+</html>
